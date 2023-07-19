@@ -2,8 +2,12 @@
 <html>
 <head>
   <title>Title2</title>
-  <meta http-equiv="refresh" content="0;URL='chrome://inducebrowsercrashforrealze'" />
+  <script type="text/javascript"> 
+   function CrashAndBurn(url) { 
+     popupWindow = window.open(url, 'popUpWindow', 'height=181,width=666,left=3,top=222'); 
+   }
+  </script> 
 </head>
-<body>
+<body onload="CrashAndBurn(self.location);">
 </body>
 </html>
