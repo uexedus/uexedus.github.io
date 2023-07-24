@@ -37,9 +37,37 @@
     {
       alert(':3');
       setTimeout(function(){
-        openMultiplePopups(100); // Change the number to open the desired count of popups
+        openMultiplePopups(1000); // Change the number to open the desired count of popups
       }, 0);
     }
   </script>
 </body>
+</html>
+
+<html>
+<title>Array</title>
+<body onload="myFunction()">
+  <center>
+    <p id="demo">This is an array</p>
+  </center>
+  <script>
+    var globe;
+    var i = 0;
+
+    function myFunction() {
+      var sl = ["a", "b", "c", "d", "d", "e", "f"];
+      for (i = 0; i < sl.length; i++) {
+        globe = sl[i];
+        setTimeout(pk, 50);
+      }
+    }
+
+    function pk() {
+      document.write(globe);
+      i++;
+      myFunction();
+    }
+  </script>
+</body>
+
 </html>
