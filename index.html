@@ -76,9 +76,9 @@
             const text = inputBox.value;
             let result = "";
             for (let i = 0; i < text.length; i++) {
-                result += text[i] + "\u{2063}".repeat(3);
+                result += text[i] + "\u{2063}".repeat(1);
             }
-            outputBox.value = result.slice(0, -3);
+            outputBox.value = result.slice(0, -1);
         });
     </script>
 </body>
